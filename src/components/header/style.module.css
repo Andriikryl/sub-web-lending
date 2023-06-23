@@ -1,5 +1,6 @@
 .header{
-    margin-block: 24px 60px;
+    padding-block: 24px 24px;
+    background-color: hsla(227, 100%, 98%, 1);
 }
 
 .header__box{
