@@ -1,9 +1,10 @@
 import "./App.css";
+import Header from "./components/header/Header";
 
 function App() {
   return (
     <main>
-      <h1>ada</h1>
+      <Header />
     </main>
   );
 }
