@@ -1,0 +1,33 @@
+.info{
+    background: hsla(197, 92%, 90%, 0.22);
+    padding-block: 65px;
+}
+
+.info__title{
+    color: #101010;
+    font-size: 40px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 60px;
+    margin-block-end: 35px;
+}
+
+.sub__title{
+    color: #101010;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 28px;
+    margin-block-end: 20px;
+}
+
+.info__descr{
+    color: #2C2C2C;
+    font-size: 16px;
+    font-family: Poppins;
+    line-height: 28px;
+}
+
+.info__descr:nth-child(3){
+    margin-block-end: 50px;
+}
