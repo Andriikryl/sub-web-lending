@@ -38,7 +38,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ ease: "easeOut", duration: 2 }}
           >
-            <img src="public/header/logo.svg" alt="logo" />
+            <img src="./image/logo.svg" alt="logo" />
           </motion.a>
           <nav
             className={`${styles.nav} ${activeState ? styles.menu_active : ""}`}
