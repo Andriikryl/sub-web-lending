@@ -1,7 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./style.module.css";
 
-
 export default function Timer() {
   return (
     <div className={styles.felx}>
@@ -26,7 +25,7 @@ function TimerUseNowStop() {
 
   const fromStart = now - startAt;
 
-  const countDown = Math.max(0, 40000000 - fromStart);
+  const countDown = Math.max(0, 400000000 - fromStart);
 
   const isCountEnd: boolean = countDown === 0;
 

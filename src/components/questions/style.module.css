@@ -1,0 +1,102 @@
+.questions{
+    padding-block: 60px;
+}
+
+.questions__title{
+    color: #101010;
+    text-align: center;
+    font-size: 40px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 60px;
+    margin-block-end: 30px;
+}
+
+li{
+    list-style: none;
+  }
+  
+  .accordion{
+    margin-bottom: 10px;
+  }
+  
+  .accordion__control{
+    border-radius: 12px;
+    background: #00AFF0;
+    padding: 24px;
+    gap: clamp(10px, 5vw + 1rem, 60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .accordion__control::webkit-details-marker {
+    display: none;
+  }
+  
+  .accordion__title{
+    color: #FFF;
+    font-size: clamp(16px, 5vw, 20px);
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  
+  .accordion__icon{
+    display: block;
+    position: relative;
+    min-width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background-color: hsla(196, 89%, 54%, 1);
+  }
+  
+  .accordion__icon::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+  
+  
+  .accordion__icon::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 2px;
+    height: 50%;
+    background-color: hsla(0, 0%, 100%, 1);
+    transition: all 500ms ease-in-out;
+  }
+  
+  .accordion[open] .accordion__icon::after{
+      display: none;
+  }
+  
+  
+  .accordion__content{
+    padding: 20px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 41.777610778808594px 33.422088623046875px 0px rgba(0, 175, 240, 0.04), 0px 100px 80px 0px rgba(0, 175, 240, 0.02);
+  }
+  

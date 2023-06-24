@@ -3,6 +3,7 @@ import Buy from "./components/buy/Buy";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Info from "./components/info/Info";
+import Questions from "./components/questions/Questions";
 import Types from "./components/types/Types";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Buy />
       <Types />
       <Info />
+      <Questions />
     </main>
   );
 }
