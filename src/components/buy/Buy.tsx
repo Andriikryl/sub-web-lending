@@ -33,7 +33,7 @@ export default function Buy() {
             </ul>
             <button className={styles.buy__btn}>Buy Now!</button>
           </div>
-          <div>
+          <div className={styles.img__box}>
             <img
               src="public/buy/buy-mob.png"
               alt="imag"

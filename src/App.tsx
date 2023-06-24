@@ -1,5 +1,6 @@
 import "./App.css";
 import Buy from "./components/buy/Buy";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Info from "./components/info/Info";
@@ -15,6 +16,7 @@ function App() {
       <Types />
       <Info />
       <Questions />
+      <Footer />
     </main>
   );
 }
