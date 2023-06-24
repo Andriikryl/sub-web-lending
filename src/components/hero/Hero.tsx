@@ -1,6 +1,7 @@
 import { Container } from "../container/Container";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
+import Like from "./images/like.png"
 
 export default function Hero() {
   return (
@@ -96,7 +97,7 @@ export default function Hero() {
             }}
           >
             <img
-              src="public/hero/like.png"
+              src={Like}
               width="149"
               height="149"
               alt="hero-image"

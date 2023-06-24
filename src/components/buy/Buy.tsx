@@ -1,6 +1,7 @@
 import { Container } from "../container/Container";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
+import BuyImg from "./images/buy-mob.png";
 
 const Animation = {
   hidden: {
@@ -122,12 +123,7 @@ export default function Buy() {
             variants={Animation}
             custom={2.5}
           >
-            <img
-              src="public/buy/buy-mob.png"
-              alt="imag"
-              width="689"
-              height="712"
-            />
+            <img src={BuyImg} alt="imag" width="689" height="712" />
           </motion.div>
         </div>
       </Container>
