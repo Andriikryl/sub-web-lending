@@ -11,6 +11,7 @@
 
 .buy{
     padding-block: 63px 114px;
+    overflow-x: hidden;
 }
 
 .buy__box{

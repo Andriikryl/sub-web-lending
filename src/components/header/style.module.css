@@ -1,6 +1,7 @@
 .header{
     padding-block: 24px 24px;
     background-color: hsla(227, 100%, 98%, 1);
+    overflow: hidden;
 }
 
 .header__box{

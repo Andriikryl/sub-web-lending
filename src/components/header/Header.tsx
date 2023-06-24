@@ -2,6 +2,19 @@ import { useState } from "react";
 import { Container } from "../container/Container";
 import BurgerButton from "./BurgerButton";
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
+
+const linksAnimation = {
+  hidden: {
+    x: 200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2, ease: "easeOut" },
+  }),
+};
 
 export default function Header() {
   const [activeState, setActiveState] = useState(false);
@@ -10,41 +23,68 @@ export default function Header() {
     setActiveState((prev) => !prev);
   };
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={styles.header}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <Container>
         <div className={styles.header__box}>
-          <a href="#" className={styles.header__logo}>
+          <motion.a
+            href="#"
+            className={styles.header__logo}
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+          >
             <img src="public/header/logo.svg" alt="logo" />
-          </a>
+          </motion.a>
           <nav
             className={`${styles.nav} ${activeState ? styles.menu_active : ""}`}
           >
             <ul className={styles.nav__list}>
-              <li className={styles.list__item}>
-                <a className={styles.list__link} href="#">
+              <motion.li
+                className={styles.list__item}
+                variants={linksAnimation}
+                custom={3}
+              >
+                <motion.a className={styles.list__link} href="#">
                   Buy OnlyFans Likes
-                </a>
-              </li>
-              <li className={styles.list__item}>
-                <a className={styles.list__link} href="#">
+                </motion.a>
+              </motion.li>
+              <motion.li
+                className={styles.list__item}
+                variants={linksAnimation}
+                custom={3.3}
+              >
+                <motion.a className={styles.list__link} href="#">
                   Buy OnlyFans Subscribers
-                </a>
-              </li>
-              <li className={styles.list__item}>
-                <a className={styles.list__link} href="#">
+                </motion.a>
+              </motion.li>
+              <motion.li
+                className={styles.list__item}
+                variants={linksAnimation}
+                custom={3.3}
+              >
+                <motion.a className={styles.list__link} href="#">
                   FAQ
-                </a>
-              </li>
-              <li className={styles.list__item}>
-                <a className={styles.list__link} href="#">
+                </motion.a>
+              </motion.li>
+              <motion.li
+                className={styles.list__item}
+                variants={linksAnimation}
+                custom={3.6}
+              >
+                <motion.a className={styles.list__link} href="#">
                   Contact Us
-                </a>
-              </li>
+                </motion.a>
+              </motion.li>
             </ul>
           </nav>
           <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }

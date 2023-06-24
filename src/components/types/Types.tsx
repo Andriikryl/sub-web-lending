@@ -1,12 +1,35 @@
 import { Container } from "../container/Container";
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
+
+const Animation = {
+  hidden: {
+    y: -200,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2, ease: "easeOut" },
+  }),
+};
+
 export default function Types() {
   return (
-    <div className={styles.types}>
+    <motion.div
+      className={styles.types}
+      viewport={{ amount: 0.3, once: true }}
+      initial="hidden"
+      whileInView="visible"
+    >
       <Container>
         <div className={styles.types__box}>
           <ul className={styles.types__list}>
-            <li className={styles.list__item}>
+            <motion.li
+              className={styles.list__item}
+              variants={Animation}
+              custom={1.3}
+            >
               <div className={styles.list__img}>
                 <img src="public/types/Star.svg" alt="img" />
               </div>
@@ -15,8 +38,12 @@ export default function Types() {
                 Your profile's in safe hands - we stick strictly to OnlyFans'
                 legal and official methods.
               </p>
-            </li>
-            <li className={styles.list__item}>
+            </motion.li>
+            <motion.li
+              className={styles.list__item}
+              variants={Animation}
+              custom={1.5}
+            >
               <div className={styles.list__img}>
                 <img src="public/types/save.svg" alt="img" />
               </div>
@@ -25,8 +52,12 @@ export default function Types() {
                 Your profile's in safe hands - we stick strictly to OnlyFans'
                 legal and official methods.
               </p>
-            </li>
-            <li className={styles.list__item}>
+            </motion.li>
+            <motion.li
+              className={styles.list__item}
+              variants={Animation}
+              custom={1.7}
+            >
               <div className={styles.list__img}>
                 <img src="public/types/secur.svg" alt="img" />
               </div>
@@ -35,10 +66,10 @@ export default function Types() {
                 Your profile's in safe hands - we stick strictly to OnlyFans'
                 legal and official methods.
               </p>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </Container>
-    </div>
+    </motion.div>
   );
 }
