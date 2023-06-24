@@ -3,6 +3,7 @@ import { Container } from "../container/Container";
 import BurgerButton from "./BurgerButton";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
+import Logo from "./image/logo.svg";
 
 const linksAnimation = {
   hidden: {
@@ -38,7 +39,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ ease: "easeOut", duration: 2 }}
           >
-            <img src="./image/logo.svg" alt="logo" />
+            <img src={Logo} alt="logo" />
           </motion.a>
           <nav
             className={`${styles.nav} ${activeState ? styles.menu_active : ""}`}
