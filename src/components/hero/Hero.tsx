@@ -1,5 +1,4 @@
 import { Container } from "../container/Container";
-import Timer from "./Timer";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
 
@@ -79,7 +78,6 @@ export default function Hero() {
                   </motion.button>
                 </form>
               </div>
-              <Timer />
             </div>
           </div>
           <motion.div
