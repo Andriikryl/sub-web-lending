@@ -5,7 +5,7 @@
 .questions__title{
     color: #101010;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(20px, 5vw + 1rem, 40px);
     font-family: Poppins;
     font-weight: 600;
     line-height: 60px;
@@ -41,6 +41,14 @@ li{
     font-family: Poppins;
     font-weight: 600;
     line-height: 36px;
+  }
+
+  @media (max-width: 600px) {
+    .accordion__title{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
   
   .accordion__icon{

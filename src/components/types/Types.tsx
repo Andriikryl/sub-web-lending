@@ -1,6 +1,8 @@
 import { Container } from "../container/Container";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
+import Star from "./images/Star.svg";
+import Secur from "./images/secur.svg";
 
 const Animation = {
   hidden: {
@@ -31,7 +33,7 @@ export default function Types() {
               custom={1.3}
             >
               <div className={styles.list__img}>
-                <img src="public/types/Star.svg" alt="img" />
+                <img src={Star} alt="img" />
               </div>
               <h3 className={styles.list__title}>4.9/5</h3>
               <p className={styles.list__descr}>
@@ -45,7 +47,7 @@ export default function Types() {
               custom={1.5}
             >
               <div className={styles.list__img}>
-                <img src="public/types/save.svg" alt="img" />
+                <img src="./images/save.svg" alt="img" />
               </div>
               <h3 className={styles.list__title}>Secure Card Payments</h3>
               <p className={styles.list__descr}>
@@ -59,7 +61,7 @@ export default function Types() {
               custom={1.7}
             >
               <div className={styles.list__img}>
-                <img src="public/types/secur.svg" alt="img" />
+                <img src={Secur} alt="img" />
               </div>
               <h3 className={styles.list__title}>OnlyFans Safe</h3>
               <p className={styles.list__descr}>

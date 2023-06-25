@@ -43,6 +43,12 @@
    align-items: center;
 }
 
+@media (max-width: 450px) {
+    .buy__info{
+        padding-inline: 20px;
+    }
+}
+
 .info__btn{
     color: #FFF;
     text-align: center;
@@ -111,6 +117,7 @@
     background-image: url("./images/conf.svg");
     width: 20px;
     height: 20px;   
+    aspect-ratio: 1/1;
 }
 
 .buy__btn{
