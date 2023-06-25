@@ -2,7 +2,6 @@ import { Container } from "../container/Container";
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
 import Star from "./images/Star.svg";
-import Secur from "./images/secur.svg";
 
 const Animation = {
   hidden: {
@@ -61,7 +60,7 @@ export default function Types() {
               custom={1.7}
             >
               <div className={styles.list__img}>
-                <img src={Secur} alt="img" />
+                <img src="src/components/types/images/secur.svg" alt="img" />
               </div>
               <h3 className={styles.list__title}>OnlyFans Safe</h3>
               <p className={styles.list__descr}>
